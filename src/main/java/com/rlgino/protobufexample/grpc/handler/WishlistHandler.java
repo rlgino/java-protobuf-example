@@ -1,9 +1,9 @@
-package com.rlgino.protobufexample.grpc;
+package com.rlgino.protobufexample.grpc.handler;
 
 import com.rlgino.protobufexample.protobuf.WishListServiceGrpc;
 import com.rlgino.protobufexample.protobuf.Wishlist;
 
-public final class WishlistService extends WishListServiceGrpc.WishListServiceImplBase {
+public final class WishlistHandler extends WishListServiceGrpc.WishListServiceImplBase {
     @Override
     public void create(Wishlist.CreateWishListReq request, io.grpc.stub.StreamObserver<Wishlist.CreateWishListResp> responseObserver) {
         System.out.println("It recived an wishlist " + request.getWishList().getName());
